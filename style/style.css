@@ -34,6 +34,87 @@ input[type="submit"],input[type="text"]{
 @font-face{font-family:'apercu';src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-bold-pro.eot");src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-bold-pro.eot?#iefix") format("embedded-opentype"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-bold-pro.woff") format("woff"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-bold-pro.woff2") format("woff2"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-bold-pro.ttf") format("truetype");font-weight:600;font-weight:bold;font-style:normal}
 @font-face{font-family:'apercu';src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-black-pro.eot");src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-black-pro.eot?#iefix") format("embedded-opentype"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-black-pro.woff") format("woff"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-black-pro.woff2") format("woff2"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-black-pro.ttf") format("truetype");font-weight:800;font-style:normal}
 
+.button{
+	position:relative;
+	display:inline-block;
+	height:60px;
+	padding:0 35;
+	background-color:#49c5b6;
+	color:#fff;
+	line-height:63px;
+	text-align:center;
+	font-size:13px;
+	font-weight:500;
+	cursor:pointer;
+	border:none;
+	overflow:hidden;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out
+}
+
+.button:focus{
+	outline:none;
+}
+
+.button .button-large{
+	height:70px;
+	line-height:70px;
+}
+
+/*
+.button.button-small{height:50px;padding:0 20px;line-height:50px}
+        .button.button-ico .ico-svg{top:-2px;fill:#fcfcfc;margin-right:5px;vertical-align:middle}
+        .button.button-ext{padding:0 25px;font-size:14px;background-color:#fcfcfc;color:#202121}
+        .button.button-ext:hover{background-color:#fff}
+        .button.button-ext img{position:relative;top:-1px;margin-right:10px;vertical-align:middle}
+        .button.button-gray{background-color:#E6EAEA;color:#202121}
+        .button.button-red{background-color:#D14836;color:#fff}
+        .button.button-trans{background-color:transparent;border:1px solid #DBE0DF;color:#202121}
+        .button.button-light{background-color:transparent;border:1px solid #fff}
+        .button.button-white{background-color:#fcfcfc;color:#202121}
+        .button.button-loadmore{position:relative;clear:both;display:block;width:190px;margin:0 auto;color:#BDC1C0;background-color:#fcfcfc;font-size:17px;font-weight:400}
+        .button.button-loadmore.style2{margin-top:15px}
+        .button.button-loadmore:hover{background:#fff;color:#A6ABAB}
+        .button.button-loadmore.is-loading{background-color:#fcfcfc;color:#DBE0DF}
+        .button.button-loadmore.is-loading .txt-loading{display:block}
+        .button.button-loadmore.is-loading .txt-default{display:none}
+        .grid .button.button-loadmore{-webkit-transform:translateX(17px);transform:translateX(17px)}
+        .button.button-loadmore .bt-progress{background:#f3f3f3}
+        .button.button-loadmore .txt-loading{display:none}
+        .button.border-black{background-color:transparent;border:1px solid #202121;color:#202121}
+        .button.border-black:hover{border-color:#49c5b6}
+        .button.border-black:hover .ico-svg{fill:#fff}
+        .button.border-gray{background-color:transparent;border:1px solid #DBE0DF;color:#202121}
+        .button.border-gray:hover{border-color:#49c5b6}
+        .button.border-gray:hover .ico-svg{fill:#fff}
+        .button.border-green{background-color:transparent;border:1px solid #49c5b6;color:#49c5b6}
+        .button.border-green .ico-svg{fill:#49c5b6}
+        .button.border-green:hover .ico-svg{fill:#fff}
+        .button.button-follow{background-color:transparent;border:1px solid;border-color:#DBE0DF;color:#A6ABAB;font-size:14px}
+        .button.button-follow .stats{color:#49c5b6;-webkit-transition:color 0.3s ease-in-out;transition:color 0.3s ease-in-out}
+        .button.button-follow .stats strong{color:#202121;-webkit-transition:color 0.3s ease-in-out;transition:color 0.3s ease-in-out}
+        .button.button-follow .stats .ico-svg{fill:#49c5b6;vertical-align:middle}
+        .button.button-follow .stats:hover{color:#fff}
+        .button.button-follow .stats:hover strong{color:#fff}
+        .button.button-follow .stats:hover .ico-svg{fill:#fff}
+        .button.button-follow .bt-content{-webkit-transition:opacity 0.3s;transition:opacity 0.3s}
+        .button.button-follow .bt-content:after{content:'';position:relative;display:inline-block;top:-3px;width:12px;height:7px;margin-left:10px;border:2px solid #A6ABAB;border-top:none;border-right:none;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transition:border 0.3s ease-in-out;transition:border 0.3s ease-in-out}
+        .button.button-follow:not(.is-loading):hover,.button.button-follow.active{background-color:#49c5b6;border-color:#49c5b6;color:#fff}
+        .button.button-follow:not(.is-loading):hover .bt-content:after,.button.button-follow.active .bt-content:after{border-color:#fff}
+        .button.is-loading{cursor:default;background-color:#49c5b6;border-color:#49c5b6;color:#fff}
+*/
+
+.button:hover{
+	color:#fff;
+	background-color:#49c5b6;
+	border-color:#49c5b6;
+}
+
+
+
+
+
+
 
 
 
@@ -44,10 +125,26 @@ body{
 	font-weight:300;
 	color:#202121;
 	background:#f4f7f6;
-	/*
-	overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility
-	*/
+	overflow-x:hidden;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	text-rendering:optimizeLegibility
 }
+
+/* 
+body.hidden-y{overflow-y:hidden}
+body.ht-visible .wrapper{padding-top:0}
+body.ht-visible #header{position:relative;height:140px}
+body.ht-visible #header .header-top{display:-webkit-box;display:-ms-flexbox;display:flex}
+body:not(.ht-visible) #header header-top{display:none}
+body.header-fixed .wrapper{padding-top:140px}
+body.header-fixed #header{position:fixed;top:0;left:0;height:70px}
+body.header-fixed #header .header-top{display:none}
+body.filters .wrapper{padding-top:140px}
+body.filters .box-filters.fixed{position:fixed;top:70px;z-index:1}
+body.filters.filters-hide .box-filters.fixed{-webkit-transform:translateY(-71px);transform:translateY(-71px)}
+body.filters #search-result{margin-top:-70px}
+*/
 
 a{
 	color:#49c5b6;
@@ -62,6 +159,131 @@ a:hover{
 	text-decoration:none;
 }
 
+strong{
+	font-weight:500;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin-bottom:25px;
+	font-weight:normal;
+	line-height:170%;
+}
+
+h1,h2{
+	line-height:normal;
+}
+
+h1,.h1{
+	font-size:60px;
+}
+
+h2,.h2{
+	font-size:24px;
+}
+
+h3,.h3{
+	font-size:19px;
+}
+
+h4,.h4{
+	font-size:17px;
+}
+
+h5,.h5{
+	font-size:16px;
+}
+
+h6,.h6{
+	font-size:12px;
+}
+
+p,blockquote, .p{
+	margin-bottom:25px;
+	line-height:170%;
+}
+
+img{
+	max-width:100%;
+	height:auto;
+}
+input,textarea,select,button{
+	font-family:"apercu", sans-serif;
+	font-size:16px;
+	color:#202121;
+}
+
+.link-1{
+	display:inline-block;
+	color:#202121 !important;
+	border-bottom:1px solid rgba(32,33,33,0.5);
+	line-height:normal;
+	cursor:pointer;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+.link-1:hover{ /*왜 있는지 모르겠음*/
+	border-color:#202121; 
+}
+
+
+
+.ico-menu{
+	position:relative;
+	display:inline-block;
+	width:15px;
+	height:13px;
+}
+
+.ico-menu .bar{
+	position:absolute;
+	width:100%;
+	height:2px;
+	background-color:#202121;
+	border-radius:2px;
+	overflow:hidden;
+}
+
+.ico-menu .bar:nth-child(1){
+	top:0;
+}
+
+.ico-menu .bar:nth-child(2){
+	top:4px;
+}
+
+.ico-menu .bar:nth-child(3){
+	top:8px;
+}
+
+.ico-menu .bar:after{
+	content:'';
+	display:block;
+	width:100%;
+	height:100%;
+	background:#A6AbAB;
+	position:absolute;
+	top:0;
+	left:100%;
+	z-index:1;
+	-webkit-transition:0.3s;
+	transition:0.3s;
+}
+
+.ico-menu .bar:nth-child(1):after{
+	-webkit-transition-delay:0.1s;
+	transition-delay:0.1s
+}
+
+.ico-menu .bar:nth-child(2):after{
+	-webkit-transition-delay:0.2s;
+	transition-delay:0.2s
+}
+
+.ico-menu .bar:nth-child(3):after{
+	-webkit-transition-delay:0.3s;
+	transition-delay:0.3s
+}
 
 /* .box-information 없음
 .box-information:after{content:'';display:block;clear:both}
@@ -70,6 +292,7 @@ a:hover{
 .box-information .header .box-left,.box-information .header .box-right{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .box-information .header .menu-tabs li:first-child{margin-left:0}
 */
+
 
 .logo-header{
 	
@@ -273,10 +496,41 @@ a:hover{
 }
 
 .nav-main .menu{
-	display:none;
+	/*display:none;*/
 }
 .nav-main .menu .active {
 	display:block;
+}
+
+.nav-main .menu .item, .nav-main .menu a {
+	position:relative;
+	display:block;
+	padding:24px 36px;
+	font-size:17px;
+	font-weight:bold;
+	color:#202121;
+	cursor:pointer;
+	background:#F4F7F6;
+	border-bottom:1px solid #E6EAEA;
+	-webkit-transition:background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+	transition:background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav-main .menu .item .item-photo img, .nav-main .menu a .item-photo img {
+	display:block;
+	padding-top:6px;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+.nav-main .menu .item:hover, .nav-main .menu a:hover{
+	background-color:#fcfcfc;
+	-webkit-transition:background 0.3s ease-in-out;
+	transition:background 0.3s ease-in-out
+}
+
+.nav-main .menu .item:hover .soon,.nav-main .menu a:hover .soon{
+	
 }
 
 
@@ -335,6 +589,7 @@ a:hover{
 
 #header .header-top .list-social .ico-svg{
 	fill:#202121;
+
 }
 
 #header .header-top .list-social .ico-svg:hover{
@@ -378,7 +633,7 @@ a:hover{
 	overflow:hidden; /*잘 모르겠음*/
 	-webkit-transition:all 0.3s ease-in-out;
 	transition:all 0.3s ease-in-out;
-	
+
 }
 
 #header .bt-menu .ico-menu{ /*메뉴 막대기*/
@@ -396,7 +651,7 @@ a:hover{
 	color:#64686A;
 }
 
-#header .bt-menu:hover .ico-menu .bar:after{
+#header .bt-menu:hover .ico-menu .bar:after{ /*메뉴텍스트에 hover되면 left:100%로 감춰져있던 .bar:after가 이동, 가상클래스이기때문에 이동 전에는 보이지 않는 듯*/
 	left:0;
 }
 
@@ -444,5 +699,69 @@ a:hover{
 
 
 
+
+
+#bt-submit{
+	position:relative;
+	width:190px;
+	height:70px;
+	padding:0 !important;
+	overflow:hidden; /*이걸 해야 bt-gotop이 사라짐*/
+	-webkit-transition:width 0.3s ease-in-out;
+	transition:width 0.3s ease-in-out
+}
+
+#bt-submit .button{
+	width:190px;
+	height:70px;
+	padding:0;
+	line-height:73px;
+	overflow:hidden;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+
+
+
+
+.list-social{ /*li 말고 부모단계에서는 inline-block 써야되나? 싶었는데 써야지 정렬이 바르게되네*/
+	display:inline-block;
+	text-align:center;
+}
+
+.list-social li{
+	display:inline-block;
+	margin-right:10px;
+	cursor:pointer;
+}
+
+.list-social li:last-child{
+	margin-right:0;
+}
+
+.list-social li:hover .ico-svg{
+	fill:#49c5b6;
+}
+
+.list-social a{ /*왜 block 썼는지 모르겠음*/
+	display:block;
+}
+
+/* .popup 없음
+.list-social .popup{-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out}
+.list-social .popup:hover{opacity:0.75}
+*/
+
+.list-social .ico-svg{
+	fill:#BDC1C0;
+	height:13px;
+}
+
+.list-social .ico-svg .ico-facebook{
+	height:16px;
+}
+
+.list-social.style-dark .ico-svg{fill:#000}
 
 

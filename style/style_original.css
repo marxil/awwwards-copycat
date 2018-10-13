@@ -978,7 +978,7 @@
         .box-lightbox .box-content-collections .box-check *{vertical-align:middle}
         .box-lightbox .box-content-collections .box-check .label{margin-right:5px;color:#A6ABAB}
         .box-lightbox .box-content-collections .box-categories{display:-webkit-box;display:-ms-flexbox;display:flex;width:477px;background-color:#f4f7f6}
-        .box-lightbox .box-content-collections .box-categories .bt-add{height:98px;line-height:98px;font-size:17px;font-weight:bold;text-align:center;background-color:#DBE0DF;cursor:pointer;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out}
+        .box-lightbox .box-content-collections .box-rcategories .bt-add{height:98px;line-height:98px;font-size:17px;font-weight:bold;text-align:center;background-color:#DBE0DF;cursor:pointer;-webkit-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out}
         .box-lightbox .box-content-collections .box-categories .bt-add:hover{opacity:0.75}
         .box-lightbox .box-content-collections .box-categories .box-msg{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:0 20px;min-height:271px;font-size:17px;text-align:center}
         .box-lightbox .box-content-collections .box-categories .box-msg p{margin-bottom:10px}

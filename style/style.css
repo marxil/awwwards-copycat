@@ -1,0 +1,138 @@
+*{
+	margin:0;
+	padding:0;
+}
+html{
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+*, *:before, *:after{
+	-webkit-box-sizing:inherit;
+	box-sizing:inherit;
+}
+article,aside,details,figcaption,figure,footer,header,nav,section{
+	display:block;
+}
+li{
+	list-style:none;
+}
+table{
+	border-collapse:separate; border-spacing:0;
+}
+img{
+	border:none;
+}
+/*
+input[type="submit"],input[type="text"]{
+-webkit-appearance:none
+}
+*/
+@font-face{font-family:'apercu';src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-pro.eot");src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-pro.eot?#iefix") format("embedded-opentype"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-pro.woff") format("woff"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-pro.woff2") format("woff2"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-pro.ttf") format("truetype");font-weight:300;font-style:normal}
+@font-face{font-family:'apercu';src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-italic-pro.eot");src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-italic-pro.eot?#iefix") format("embedded-opentype"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-italic-pro.woff") format("woff"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-italic-pro.woff2") format("woff2"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-italic-pro.ttf") format("truetype");font-weight:300;font-style:italic}
+@font-face{font-family:'apercu';src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-regular-pro.eot");src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-regular-pro.eot?#iefix") format("embedded-opentype"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-regular-pro.woff") format("woff"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-regular-pro.woff2") format("woff2"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-regular-pro.ttf") format("truetype");font-weight:400;font-style:normal}
+@font-face{font-family:'apercu';src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-medium-pro.eot");src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-medium-pro.eot?#iefix") format("embedded-opentype"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-medium-pro.woff") format("woff"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-medium-pro.woff2") format("woff2"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-medium-pro.ttf") format("truetype");font-weight:500;font-style:normal}
+@font-face{font-family:'apercu';src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-bold-pro.eot");src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-bold-pro.eot?#iefix") format("embedded-opentype"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-bold-pro.woff") format("woff"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-bold-pro.woff2") format("woff2"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-bold-pro.ttf") format("truetype");font-weight:600;font-weight:bold;font-style:normal}
+@font-face{font-family:'apercu';src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-black-pro.eot");src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-black-pro.eot?#iefix") format("embedded-opentype"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-black-pro.woff") format("woff"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-black-pro.woff2") format("woff2"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-black-pro.ttf") format("truetype");font-weight:800;font-style:normal}
+
+
+
+
+body{
+	margin:auto;
+	font-family:"apercu",sans-serif;
+	font-size:14px;
+	font-weight:300;
+	color:#202121;
+	background:#f4f7f6;
+	/*
+	overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility
+	*/
+}
+
+a{
+	color:#49c5b6;
+	text-decoration:none;
+	-webkit-transition:color 0.3s ease-in-out;
+	transition:color 0.3s ease-in-out;
+
+}
+
+a:hover{
+	color:#202121;
+	text-decoration:none;
+}
+
+.logo-header{
+	display:block;
+	position:absolute;
+	top:21px;
+	left:50%;
+}
+
+
+
+
+
+
+
+
+.wrapper{
+	position:relative;
+	width:100%;
+	min-height:100%;
+	padding-top:70px;
+	background:#f4f7f6;
+	z-index:2;
+	-webkit-transition:-webkit-transform 0.5s ease-in-out;
+	transition:-webkit-transform 0.5s ease-in-out;
+	transition:transform 0.5s ease-in-out;
+	transition:transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out
+}
+
+.wrapper:before{ /*왜 쓰는거지?*/
+	content:'';
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.75);
+	z-index:400;
+	opacity:0;
+	visibility:hidden;
+	-webkit-transition:all 0.5s ease-in-out;
+	transition:all 0.5s ease-in-out
+}
+
+.nav-main{
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	-ms-flex-direction:column;
+	flex-direction:column;
+	-webkit-box-pack:justify;
+	-ms-flex-pack:justify;
+	justify-content:space-between;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	width:320px;
+	height:100vh;
+	background:#f4f7f6;
+	overflow-y:auto;
+	z-index:301;
+	-webkit-transform:translateX(-320px);
+	transform:translateX(-320px);
+	-webkit-transition:background 0.3s ease-in-out;
+	transition:background 0.3s ease-in-out;
+}
+
+
+
+
+
+

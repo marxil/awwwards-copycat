@@ -63,15 +63,93 @@ a:hover{
 }
 
 .logo-header{
+	
 	display:block;
 	position:absolute;
 	top:21px;
-	left:50%;
+	left:50%; /*오른쪽으로 50% 옮김*/
+	width:auto;
+	height:23px;
+	line-height:normal;
+	-webkit-transform:translateX(-50%);
+	transform:translateX(-50%); /*width 기준으로 50% 왼쪽으로 옮겨서 중앙정렬 완성*/
+
 }
 
+.logo-header:before{ /*왜 만드는지 모르겠음*/
+	content:'';
+	position:absolute;
+	top:0;
+	right:-50px;
+	width:60px;
+	height:100%;
+	z-index:-1;
+}
 
+/* .w가 뭔지 모르겠음 
+.logo-header.w svg{width:230px}
+.logo-header.w:hover .logo-tooltip{-webkit-transform:translateX(0px);transform:translateX(0px)}
+.logo-header.w .logo-fill:not(#logo-w1):not(#logo-p){fill:transparent;-webkit-transform:translateX(85px);transform:translateX(85px)}
+.logo-header.w #logo-w1{-webkit-transform:translateX(85px);transform:translateX(85px)}
+.logo-header.w #logo-p{-webkit-transform:translateX(-110px);transform:translateX(-110px)}
+.logo-header.w .logo-tooltip{-webkit-transform:translateX(30px);transform:translateX(30px)}
+*/  
+.logo-header:hover .logo-tooltip{
+	opacity:1;
+	visibility:visible;
+	-webkit-transform:translateX(95px);
+	transform:translateX(95px);
+}
 
+/*
+.logo-header:visited .w path{
+	fill:inherit;
+}
+*/
 
+.logo-header .logo-tooltip{
+	position:absolute;
+	top:-4px;
+	left:100%;
+	-webkit-transform:translateX(125px);
+	transform:translateX(125px);
+	visibility:hidden;
+	opacity:0;
+	-webkit-transition:all 0.3s;
+	transition:all 0.3s;
+}
+
+.logo-header .logo-tooltip a{
+	position:relative;
+	top:0;
+	left:-50%;
+	width:auto;
+	display:block;
+	padding:0 20px;
+	background:#9ceade;
+	color:#202121;
+	white-space:nowrap; /*줄바꿈 방지*/
+	font-size:14px;
+	line-height:36px;
+	font-weight:100;
+	text-align:center;
+	border-radius:35px;
+	z-index:970;
+}
+.logo-header .logo-tooltip a:after{ /*말풍선 꼬리*/
+	content:'';
+	position:absolute;
+	top:50%;
+	right:100%;
+	width:0;
+	height:0;
+	margin-right:-2px;
+	pointer-events:none;
+	border:solid transparent;
+	border-right-color:#9ceade;
+	border-width:6px 10px;
+	margin-top:-6px;
+}
 
 
 
@@ -121,9 +199,9 @@ a:hover{
 	bottom:0;
 	left:0;
 	width:320px;
-	height:100vh;
+	height:100vh; /*화면 전체 크기*/
 	background:#f4f7f6;
-	overflow-y:auto;
+	overflow-y:auto; /*스크롤 자동으로 설정*/
 	z-index:301;
 	-webkit-transform:translateX(-320px);
 	transform:translateX(-320px);

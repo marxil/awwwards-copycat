@@ -22,11 +22,11 @@ table{
 img{
 	border:none;
 }
-/*
+
 input[type="submit"],input[type="text"]{
 -webkit-appearance:none
 }
-*/
+
 @font-face{font-family:'apercu';src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-pro.eot");src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-pro.eot?#iefix") format("embedded-opentype"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-pro.woff") format("woff"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-pro.woff2") format("woff2"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-pro.ttf") format("truetype");font-weight:300;font-style:normal}
 @font-face{font-family:'apercu';src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-italic-pro.eot");src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-italic-pro.eot?#iefix") format("embedded-opentype"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-italic-pro.woff") format("woff"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-italic-pro.woff2") format("woff2"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-light-italic-pro.ttf") format("truetype");font-weight:300;font-style:italic}
 @font-face{font-family:'apercu';src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-regular-pro.eot");src:url("https://assets.awwwards.com/assets/fonts/apercu/apercu-regular-pro.eot?#iefix") format("embedded-opentype"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-regular-pro.woff") format("woff"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-regular-pro.woff2") format("woff2"),url("https://assets.awwwards.com/assets/fonts/apercu/apercu-regular-pro.ttf") format("truetype");font-weight:400;font-style:normal}
@@ -447,8 +447,8 @@ input,textarea,select,button{
 	background:#f4f7f6;
 	overflow-y:auto; /*스크롤 자동으로 설정*/  
 	z-index:301;
-	/*-webkit-transform:translateX(-320px);
-	transform:translateX(-320px);*/
+	-webkit-transform:translateX(-320px);
+	transform:translateX(-320px);
 	-webkit-transition:background 0.3s ease-in-out;
 	transition:background 0.3s ease-in-out;
 }
@@ -530,8 +530,109 @@ input,textarea,select,button{
 }
 
 .nav-main .menu .item:hover .soon,.nav-main .menu a:hover .soon{
-	
+	opacity:1;
 }
+
+.nav-main .menu .item i,.nav-main .menu a i{
+	display:block;
+	padding-top:5px;
+	font-weight:400;
+	color:#A6ABAB;
+	font-style:normal;
+	font-size:16px;
+}
+
+.nav-main .menu .item i.first-top,.nav-main .menu a i.first-top{
+	padding-top:12px;
+}
+
+.nav-main .menu .item .bt-check,.nav-main .menu a .bt-check{
+	position:absolute;
+	top:50%;
+	right:20%;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+.nav-main .menu .item .soon,.nav-main .menu a .soon{
+	opacity:0;
+	padding-left:10px;
+	font-weight:300px;
+	color:#49c5b6;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+.nav-main .menu>li:last-child .item, .nav-main .menu>li:last-child a{
+	border-bottom:none;
+}
+
+.nav-main .menu li.active .item{
+	color:#49c5b6
+}
+
+.nav-main .menu li [data-count]:not([data-count=""]):after{ /*선택자 활용*/
+	content:attr(data-count);
+	display:block;
+	position:absolute;
+	top:50%;
+	right:25px;
+	width:24px;
+	height:24px;
+	line-height:24px;
+	font-size:11px;
+	font-weight:500;
+	text-align:center;
+	background-color:#9ceade;
+	border-radius:50%;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+.nav-main .menu li.directory [data-count]:after{
+	background-color:#FEF7C1
+}
+
+.nav-main .menu li.jobs [data-count]:after{
+	background-color:#9ceade
+}
+
+/* dropdown 없음
+.nav-main .menu .dropdown{position:relative}
+.nav-main .menu .dropdown:before,.nav-main .menu .dropdown:after{content:'';position:absolute;right:28px;width:18px;z-index:1}
+.nav-main .menu .dropdown:before{top:27px;height:8px;border-top:3px solid #DBE0DF;border-bottom:3px solid #DBE0DF}
+.nav-main .menu .dropdown:after{top:37px;height:3px;border-top:3px solid #DBE0DF}
+.nav-main .menu .dropdown ul{display:none}
+.nav-main .menu .dropdown ul a{font-size:13px;font-weight:normal;text-transform:uppercase}
+.nav-main .menu .dropdown ul .item:hover{color:#202121}
+.nav-main .menu .dropdown ul li li [data-count]:not([data-count=""]):after,.nav-main .menu .dropdown ul li:after,.nav-main .menu .dropdown ul li:before{display:none}
+.nav-main .menu .dropdown .icon{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;top:0;right:20px;width:24px;height:100%}
+.nav-main .menu .dropdown .icon .ico-svg{top:-1px;vertical-align:middle}
+*/
+
+.nav-main .box-bottom{
+	padding:30px 25px 30px 36px;
+	width:100%;
+}
+
+.nav-main .box-bottom .box-version{
+	line-height:30px;
+	font-size:16px;
+	color:#A6ABAB;
+	font-weight:400;
+}
+
+.nav-main .box-bottom .box-version .input-check-toggle{
+	top:4px;
+	float:right;
+}
+
+/* nav-sidebar 없음
+.nav-sidebar-open .wrapper{position:fixed;-webkit-transform:translateX(320px);transform:translateX(320px)}
+.nav-sidebar-open .wrapper:before{opacity:1;visibility:visible}
+*/
+
+
 
 
 #header{
